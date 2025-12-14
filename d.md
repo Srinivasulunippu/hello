@@ -1,31 +1,3 @@
-## 1. Dataset Pipeline
-
-flowchart LR
-A[Raw Audio & Text Sources\n(Audiobooks, Scripts, Web Text)] --> B[Data Cleaning\n(remove noise, clipping, bad segments)]
-B --> C[Segmentation\n(split into utterances)]
-C --> D[Alignment\n(audio ↔ text)]
-D --> E[Normalization\n(text, sampling rate, loudness)]
-E --> F[Feature Extraction\n(mel-spectrograms, phonemes, prosody)]
-F --> G[Training Dataset\n(ready for TTS models like Piper)]
-
-
-This diagram illustrates the typical pipeline from raw recordings and text sources to a training-ready dataset used by TTS models like Piper, similar to how LibriTTS and HUI corpora are prepared. 
-Feature Extraction Flow
-
-flowchart LR
-A[Audio Waveform] --> B[Preprocessing\n(resample, trim, normalize)]
-B --> C[Acoustic Features\n(mel-spectrogram, energy)]
-B --> D[Prosodic Features\n(pitch F0, duration, pauses)]
-
-E[Text Transcripts] --> F[Text Normalization\n(expand numbers, abbreviations)]
-F --> G[Phoneme/Character Sequences]
-
-C --> H[TTS Model Input]
-D --> H
-G --> H
-
-This diagram shows how audio and text are converted into features such as mel-spectrograms, prosody signals, and phoneme sequences, which are then fed into the TTS model. 
-## 2. Updated Architecture (Mermaid)
 ## 2. Architecture
 
 flowchart LR
