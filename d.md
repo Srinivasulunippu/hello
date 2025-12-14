@@ -1,5 +1,4 @@
 ## 1. Dataset Pipeline
-Dataset Pipeline
 
 flowchart LR
 A[Raw Audio & Text Sources\n(Audiobooks, Scripts, Web Text)] --> B[Data Cleaning\n(remove noise, clipping, bad segments)]
@@ -10,12 +9,10 @@ E --> F[Feature Extraction\n(mel-spectrograms, phonemes, prosody)]
 F --> G[Training Dataset\n(ready for TTS models like Piper)]
 
 
-This diagram conceptually links dataset design choices (left) to the latent representation learned by a TTS model and finally to perceived voice qualities (right). 
 This diagram illustrates the typical pipeline from raw recordings and text sources to a training-ready dataset used by TTS models like Piper, similar to how LibriTTS and HUI corpora are prepared. [web:104][web:111]
 
 Feature Extraction Flow
 
-## 2. Architecture
 flowchart LR
 A[Audio Waveform] --> B[Preprocessing\n(resample, trim, normalize)]
 B --> C[Acoustic Features\n(mel-spectrogram, energy)]
@@ -52,6 +49,7 @@ C --> C5[Emotional Expressiveness]
 This diagram conceptually links dataset design choices (left) to the latent representation learned by a TTS model and finally to perceived voice qualities (right). [web:104][web:110][web:111]
 
 ## 2. Updated Architecture (Mermaid)
+## 2. Architecture
 
 flowchart LR
 subgraph User Side
